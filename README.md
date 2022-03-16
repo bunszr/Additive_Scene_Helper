@@ -1,5 +1,5 @@
-# Additive Scene Manager
-Switch quickly additive scenes (levels, prefabs, UI scenes)
+# Additive Scene Helper
+Switch/Open quickly additive scenes (levels, prefabs, UI scenes)
 
 ## 1. INTRODUCTION
 We work on it different scenes most of time when create games. Same time, We want to get quickly specific prefabs, gameObject etc. when we needed.
@@ -14,14 +14,14 @@ At this point, this asset will make our job much easer. <br> By adding this asse
 
 You wish, You can watch how to use tool on youtube : https://www.youtube.com/watch?v=AdGRB_8aJrQ
 
-<img src="Assets/Additive Scene Manager/Images/Screenshot 00.png" width="500" height="600">
+<img src="Assets/Additive Scene Helper/Images/Screenshot 00.png" width="500" height="600">
 
-<img src="Assets/Additive Scene Manager/Images/Screenshot 01.png" >
+<img src="Assets/Additive Scene Helper/Images/Screenshot 01.png" >
 
 It is not enough to collect our scenes under a certain folder to use this tool. <br>
 Our scenes must assign to Editor Build Settings. So that you can reorder our scenes and remove specific ones.
 
-<img src="Assets/Additive Scene Manager/Images/Screenshot 02.png">
+<img src="Assets/Additive Scene Helper/Images/Screenshot 02.png">
 
 #### 2.1. ReInitialize Button: 
 It is a button which need to be pressed when added scene, changed name, appear error in console, changed of editorBuildSettings stuff etc.
