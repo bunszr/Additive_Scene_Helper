@@ -58,3 +58,53 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Assets/Settings.meta
+Assets/Settings/ForwardRenderer.asset
+Assets/Settings/ForwardRenderer.asset.meta
+Assets/Settings/SampleSceneProfile.asset
+Assets/Settings/SampleSceneProfile.asset.meta
+Assets/Settings/UniversalRP-HighQuality.asset
+Assets/Settings/UniversalRP-HighQuality.asset.meta
+Assets/Settings/UniversalRP-LowQuality.asset
+Assets/Settings/UniversalRP-LowQuality.asset.meta
+Assets/Settings/UniversalRP-MediumQuality.asset
+Assets/Settings/UniversalRP-MediumQuality.asset.meta
+Assets/AssetStoreTools.meta
+Assets/AssetStoreTools/AS_Checklist.asset
+Assets/AssetStoreTools/AS_Checklist.asset.meta
+Assets/AssetStoreTools/Editor.meta
+Assets/AssetStoreTools/Editor/AssetStoreTools.dll
+Assets/AssetStoreTools/Editor/AssetStoreTools.dll.meta
+Assets/Additive Scene Manager/Scripts/Recovery.txt
+Assets/Additive Scene Manager/Scripts/Recovery.txt.meta
+Packages/manifest.json
+Packages/packages-lock.json
+ProjectSettings/AudioManager.asset
+ProjectSettings/ClusterInputManager.asset
+ProjectSettings/DynamicsManager.asset
+ProjectSettings/EditorBuildSettings.asset
+ProjectSettings/EditorSettings.asset
+ProjectSettings/GraphicsSettings.asset
+ProjectSettings/InputManager.asset
+ProjectSettings/NavMeshAreas.asset
+ProjectSettings/PackageManagerSettings.asset
+ProjectSettings/Physics2DSettings.asset
+ProjectSettings/PresetManager.asset
+ProjectSettings/ProjectSettings.asset
+ProjectSettings/ProjectVersion.txt
+ProjectSettings/QualitySettings.asset
+ProjectSettings/TagManager.asset
+ProjectSettings/TimelineSettings.asset
+ProjectSettings/TimeManager.asset
+ProjectSettings/UnityConnectSettings.asset
+ProjectSettings/URPProjectSettings.asset
+ProjectSettings/VersionControlSettings.asset
+ProjectSettings/VFXManager.asset
+ProjectSettings/XRSettings.asset
+UserSettings/EditorUserSettings.asset
+.vscode/launch.json
+.vscode/settings.json
+Assets/Additive Scene Helper/Scenes/LightingData.asset
+Assets/Additive Scene Helper/Scenes/LightingData.asset.meta
+Assets/Additive Scene Helper/Scripts/Recovery.txt
+Assets/Additive Scene Helper/Scripts/Recovery.txt.meta
