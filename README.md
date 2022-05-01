@@ -27,13 +27,15 @@ Our scenes must assign to Editor Build Settings. So that you can reorder our sce
 It is a button which need to be pressed when added scene, changed name, appear error in console, changed of editorBuildSettings stuff etc.
 #### 2.2. Remove All Additive Scene Button: 
 Remove all additive scene in hierarchy
-#### 2.3. SceneInfo -> Name
+#### 2.3. "R" Button: 
+Remove additive scene (scene which belongs to the slider) in hierarchy
+#### 2.4. SceneInfo -> Name
 For information on which slider belogs to which scene. It is also used it for the Playerprefs key.
-#### 2.4. SceneInfo -> FolderPath
+#### 2.5. SceneInfo -> FolderPath
 The folder path where the scenes are located.
-#### 2.5. Shortcuts (Runtime)
+#### 2.6. Shortcuts (Runtime)
 "P: Pause | N: Jump next level | R: Restart"
-#### 2.6. Shortcuts (Editor)
+#### 2.7. Shortcuts (Editor)
 Alt + A	=> Quickly open/close LevelManager <br>
 Ctrl + Shift + B =>	Build Settings <br>
 Alt+Ctrl+C => Copy folder path <br>
