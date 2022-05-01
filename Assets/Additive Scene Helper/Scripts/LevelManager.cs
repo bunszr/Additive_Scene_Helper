@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Linq;
 
-namespace AdditiveSceneManager
+namespace AdditiveSceneHelper
 {
     [CreateAssetMenu(fileName = "LevelManager", menuName = "Additive Scene Manager/LevelManager", order = 0)]
     public class LevelManager : ScriptableObject

@@ -1,8 +1,9 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using ESM = UnityEditor.SceneManagement.EditorSceneManager;
 
-namespace AdditiveSceneManager
+namespace AdditiveSceneHelper
 {
     public static class Utility
     {
@@ -10,6 +11,11 @@ namespace AdditiveSceneManager
         {
             return path.Substring(0, GetSceneFolderPathCount(path));
         }
+
+        // public static string[] GetOpenedScenesFolderPaths(this string path)
+        // {
+        //     return ESM.
+        // }
 
         public static int GetSceneFolderPathCount(string path)
         {

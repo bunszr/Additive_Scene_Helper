@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace AdditiveSceneManager
+namespace AdditiveSceneHelper
 {
     public class LevelManagerMono : MonoBehaviour
     {
