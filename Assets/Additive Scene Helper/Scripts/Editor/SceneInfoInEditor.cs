@@ -13,7 +13,7 @@ namespace AdditiveSceneHelper
         readonly LevelManager.ScenesInfo scenesInfo;
         bool disableRemoveButton;
 
-        public SceneInfoInEditor(LevelManager.ScenesInfo scenesInfo, string[] sceneFolderPath)
+        public SceneInfoInEditor(LevelManager.ScenesInfo scenesInfo)
         {
             this.scenesInfo = scenesInfo;
             this.oldLevelIndex = scenesInfo.LevelIndex;

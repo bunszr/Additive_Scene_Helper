@@ -53,12 +53,11 @@ namespace AdditiveSceneHelper
         private void Init()
         {
             levelManager = target as LevelManager;
-            string[] sceneFolderPathList = EditorBuildSettings.scenes.Select(x => x.path.Substring(0, Utility.GetSceneFolderPathCount(x.path))).ToArray();
             openedSceneFolderPathHasCodeListOnHierarchy = Enumerable.Range(0, ESM.sceneCount).Select(i => ESM.GetSceneAt(i).path.GetFolderPathFromScenePath().GetHashCode()).ToList();
 
             scenesInfoInEditors = new SceneInfoInEditor[levelManager.sceneInfos.Length];
             for (int i = 0; i < scenesInfoInEditors.Length; i++)
-                scenesInfoInEditors[i] = new SceneInfoInEditor(levelManager.sceneInfos[i], sceneFolderPathList);
+                scenesInfoInEditors[i] = new SceneInfoInEditor(levelManager.sceneInfos[i]);
         }
     }
 }
