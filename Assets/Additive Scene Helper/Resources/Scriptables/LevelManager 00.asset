@@ -16,9 +16,28 @@ MonoBehaviour:
   sceneInfos:
   - name: Levels
     sceneFolderPath: Assets/Additive Scene Helper/Scenes/Levels
+    sceneObjects:
+    - {fileID: 102900000, guid: 971555c5f172a7d4f8d4512308ddd722, type: 3}
+    - {fileID: 102900000, guid: 9007be79c17eb2048a0d4084c157805a, type: 3}
+    - {fileID: 102900000, guid: 0049d517fbcdd4f4681bd8cc1ec33276, type: 3}
+    - {fileID: 102900000, guid: e049ebb36485b25439a3fb9b93a44d2b, type: 3}
+    - {fileID: 102900000, guid: 52d499ea2caae2847b4bf0a5de1b7d5f, type: 3}
   - name: Utility
     sceneFolderPath: Assets/Additive Scene Helper/Scenes/Utility
+    sceneObjects:
+    - {fileID: 102900000, guid: 8bcbb90c2b0cbe94084e233568bfc89c, type: 3}
+    - {fileID: 102900000, guid: a6c862139ed9ba7408220b65276be8aa, type: 3}
+    - {fileID: 102900000, guid: 34ab262f6f313e94189c6419096dc35d, type: 3}
   - name: Other
     sceneFolderPath: Assets/Additive Scene Helper/Scenes/Other
+    sceneObjects:
+    - {fileID: 102900000, guid: 28a71a8df6a5f2545a4243599c99cf6f, type: 3}
+    - {fileID: 102900000, guid: 0768dac01bb87524f8fd63e03f7363e5, type: 3}
+    - {fileID: 102900000, guid: 1dc871cd4b7a0544c8a434cb287ddfe0, type: 3}
+    - {fileID: 102900000, guid: 277bcfac696edde4e88f7affa4eac1ed, type: 3}
   - name: Asset Example Scenes
     sceneFolderPath: Assets/Additive Scene Helper/Scenes/Asset Example Scenes
+    sceneObjects:
+    - {fileID: 102900000, guid: be3efd8086753b14e9688c637adcbbf7, type: 3}
+    - {fileID: 102900000, guid: cc22777aaf5ae4045a6b13b8ee5b935b, type: 3}
+    - {fileID: 102900000, guid: 6b3b0fe92007c6d448849820860e8a02, type: 3}

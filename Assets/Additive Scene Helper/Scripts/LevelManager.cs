@@ -11,21 +11,8 @@ namespace AdditiveSceneHelper
         [SerializeField] string MAIN_SCENE_NAME = "_Main Scene";
 
         public ScenesInfo[] sceneInfos;
-        [System.NonSerialized] string[] levelScenePaths; // Scene paths in the levels folder in EditorBuildSettings.
-        [System.NonSerialized] bool hasInit = false;
 
         public ScenesInfo LevelSceneInfo => sceneInfos[0];
-
-        public void Init()
-        {
-            if (!hasInit)
-            {
-                hasInit = true;
-                levelScenePaths = Enumerable.Range(0, SceneManager.sceneCountInBuildSettings)
-                  .Where(index => string.Compare(LevelSceneInfo.sceneFolderPath, SceneUtility.GetScenePathByBuildIndex(index).GetFolderPathFromScenePath(), false) == 0)
-                  .Select(index => SceneUtility.GetScenePathByBuildIndex(index)).ToArray();
-            }
-        }
 
         public void JumpNextLevel()
         {
@@ -36,10 +23,10 @@ namespace AdditiveSceneHelper
         public void ReloadScene()
         {
             SceneManager.LoadScene(MAIN_SCENE_NAME);
-            SceneManager.LoadScene(SceneUtility.GetBuildIndexByScenePath(levelScenePaths[LevelSceneInfo.LevelIndex]), LoadSceneMode.Additive);
+            SceneManager.LoadScene(LevelSceneInfo.CurrSceneName, LoadSceneMode.Additive);
         }
 
-        void IncrementLevelIndex() => LevelSceneInfo.LevelIndex = (LevelSceneInfo.LevelIndex + 1) % levelScenePaths.Length;
+        void IncrementLevelIndex() => LevelSceneInfo.LevelIndex = (LevelSceneInfo.LevelIndex + 1) % LevelSceneInfo.NumScenes;
 
         public void RunShortcutCoroutine(MonoBehaviour monoBehaviour) => monoBehaviour.StartCoroutine(UpdateShortCut());
         IEnumerator UpdateShortCut()
@@ -60,6 +47,13 @@ namespace AdditiveSceneHelper
         {
             public string name;
             public string sceneFolderPath;
+            [SerializeField] Object[] sceneObjects = new Object[] { };
+
+            public int NumScenes => sceneObjects.Length;
+            public string CurrSceneName => sceneObjects[LevelIndex].name;
+            public string CurrScenePath => sceneFolderPath + "/" + sceneObjects[LevelIndex].name + ".unity";
+            public int SceneFolderPathHashCode => sceneFolderPath.GetHashCode();
+
             public int LevelIndex
             {
                 get => PlayerPrefs.GetInt(name + "Key");

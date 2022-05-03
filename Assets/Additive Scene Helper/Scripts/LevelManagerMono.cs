@@ -8,7 +8,6 @@ namespace AdditiveSceneHelper
 
         private void Start()
         {
-            levelManager.Init();
 #if UNITY_EDITOR
             levelManager.RunShortcutCoroutine(this);
 #endif

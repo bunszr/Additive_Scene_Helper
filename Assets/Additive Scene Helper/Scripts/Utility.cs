@@ -12,11 +12,6 @@ namespace AdditiveSceneHelper
             return path.Substring(0, GetSceneFolderPathCount(path));
         }
 
-        // public static string[] GetOpenedScenesFolderPaths(this string path)
-        // {
-        //     return ESM.
-        // }
-
         public static int GetSceneFolderPathCount(string path)
         {
             for (int i = path.Length - 1; i >= 0; i--)

@@ -6,7 +6,7 @@ We work on it different scenes most of time when create games. Same time, We wan
 At this point, this asset will make our job much easer. <br> By adding this asset to project. You can get...
 
 •	Switch quickly between scenes in the same folder <br>
-•	Easly add scenes in diffrent folder <br>
+•	Easy access to specific scenes (prefabs, UI scenes) <br>
 •	In runtime, Jumping between levels in a continuous loop (Actually, this asset is editor tool. But use to jump between levels simply) <br>
 
 
@@ -18,8 +18,7 @@ You wish, You can watch how to use tool on youtube : https://www.youtube.com/wat
 
 <img src="Assets/Additive Scene Helper/Images/Screenshot 01.png" >
 
-It is not enough to collect our scenes under a certain folder to use this tool. <br>
-Our scenes must assign to Editor Build Settings. So that you can reorder our scenes and remove specific ones.
+It is not enough to collect our scenes under certain folder to use this tool. In addition, it is necessary to make assignments to the Editor Build Setting and our LevelManager asset. In this way, we can intervene in the order of our scenes through our LevelManager asset.
 
 <img src="Assets/Additive Scene Helper/Images/Screenshot 02.png">
 

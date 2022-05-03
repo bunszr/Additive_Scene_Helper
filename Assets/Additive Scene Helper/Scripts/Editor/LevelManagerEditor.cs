@@ -9,7 +9,7 @@ namespace AdditiveSceneHelper
     [CustomEditor(typeof(LevelManager))]
     public class LevelManagerEditor : Editor
     {
-        public static List<string> openedSceneFolderPathListOnHierarchy;
+        public static List<int> openedSceneFolderPathHasCodeListOnHierarchy;
 
         LevelManager levelManager;
         SceneInfoInEditor[] scenesInfoInEditors;
@@ -27,8 +27,8 @@ namespace AdditiveSceneHelper
 
         public void OnSceneClosedMethod(UnityEngine.SceneManagement.Scene closedScene)
         {
-            if (openedSceneFolderPathListOnHierarchy.Contains(closedScene.path.GetFolderPathFromScenePath()))
-                openedSceneFolderPathListOnHierarchy.Remove(closedScene.path.GetFolderPathFromScenePath());
+            if (openedSceneFolderPathHasCodeListOnHierarchy.Contains(closedScene.path.GetFolderPathFromScenePath().GetHashCode()))
+                openedSceneFolderPathHasCodeListOnHierarchy.Remove(closedScene.path.GetFolderPathFromScenePath().GetHashCode());
         }
 
         public override void OnInspectorGUI()
@@ -38,13 +38,13 @@ namespace AdditiveSceneHelper
             if (Application.isPlaying) return;
 
             EditorGUILayout.BeginHorizontal();
-            if (GUILayout.Button("Reinitialize")) Init();
+                if (GUILayout.Button("Reinitialize")) Init();
 
-            if (GUILayout.Button("Remove All Additive Scene"))
-            {
-                Enumerable.Range(1, ESM.sceneCount - 1).Reverse().ToList().ForEach(i => ESM.CloseScene(ESM.GetSceneAt(i), true));
-                Init();
-            }
+                if (GUILayout.Button("Remove All Additive Scene"))
+                {
+                    Enumerable.Range(1, ESM.sceneCount - 1).Reverse().ToList().ForEach(i => ESM.CloseScene(ESM.GetSceneAt(i), true));
+                    Init();
+                }
             EditorGUILayout.EndHorizontal();
 
             for (int i = 0; i < scenesInfoInEditors.Length; i++) scenesInfoInEditors[i].InspectorGUI();
@@ -54,7 +54,7 @@ namespace AdditiveSceneHelper
         {
             levelManager = target as LevelManager;
             string[] sceneFolderPathList = EditorBuildSettings.scenes.Select(x => x.path.Substring(0, Utility.GetSceneFolderPathCount(x.path))).ToArray();
-            openedSceneFolderPathListOnHierarchy = Enumerable.Range(0, ESM.sceneCount).Select(i => ESM.GetSceneAt(i).path.GetFolderPathFromScenePath()).ToList();
+            openedSceneFolderPathHasCodeListOnHierarchy = Enumerable.Range(0, ESM.sceneCount).Select(i => ESM.GetSceneAt(i).path.GetFolderPathFromScenePath().GetHashCode()).ToList();
 
             scenesInfoInEditors = new SceneInfoInEditor[levelManager.sceneInfos.Length];
             for (int i = 0; i < scenesInfoInEditors.Length; i++)
