@@ -12,7 +12,7 @@ At this point, this asset will make our job much easer. <br> By adding this asse
 
 ## 2. HOW TO USE
 
-You wish, You can watch how to use tool on youtube : https://www.youtube.com/watch?v=AdGRB_8aJrQ
+You wish, You can watch how to use tool on youtube : https://www.youtube.com/watch?v=-K7PXAIOKQo 
 
 <img src="Assets/Additive Scene Helper/Images/Screenshot 00.jpg" >
 
