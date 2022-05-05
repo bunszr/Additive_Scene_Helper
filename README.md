@@ -14,7 +14,7 @@ At this point, this asset will make our job much easer. <br> By adding this asse
 
 You wish, You can watch how to use tool on youtube : https://www.youtube.com/watch?v=AdGRB_8aJrQ
 
-<img src="Assets/Additive Scene Helper/Images/Screenshot 00.png" width="500" height="600">
+<img src="Assets/Additive Scene Helper/Images/Screenshot 00.jpg" >
 
 <img src="Assets/Additive Scene Helper/Images/Screenshot 01.png" >
 
