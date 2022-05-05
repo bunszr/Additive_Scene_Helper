@@ -25,15 +25,11 @@ namespace AdditiveSceneHelper
 
             if (Application.isPlaying) return;
 
-            EditorGUILayout.BeginHorizontal();
-                if (GUILayout.Button("Reinitialize")) Init();
-
-                if (GUILayout.Button("Remove All Additive Scene"))
-                {
-                    Enumerable.Range(1, ESM.sceneCount - 1).Reverse().ToList().ForEach(i => ESM.CloseScene(ESM.GetSceneAt(i), true));
-                    Init();
-                }
-            EditorGUILayout.EndHorizontal();
+            if (GUILayout.Button("Remove All Additive Scene"))
+            {
+                Enumerable.Range(1, ESM.sceneCount - 1).Reverse().ToList().ForEach(i => ESM.CloseScene(ESM.GetSceneAt(i), true));
+                Init();
+            }
 
             for (int i = 0; i < scenesInfoInEditors.Length; i++) scenesInfoInEditors[i].InspectorGUI();
         }

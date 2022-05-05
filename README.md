@@ -22,19 +22,17 @@ It is not enough to collect our scenes under certain folder to use this tool. In
 
 <img src="Assets/Additive Scene Helper/Images/Screenshot 02.png">
 
-#### 2.1. ReInitialize Button: 
-It is a button which need to be pressed when added scene, changed name, appear error in console, changed of editorBuildSettings stuff etc.
-#### 2.2. Remove All Additive Scene Button: 
+#### 2.1. Remove All Additive Scene Button: 
 Remove all additive scene in hierarchy
-#### 2.3. "R" Button: 
+#### 2.2. "R" Button: 
 Remove additive scene (scene which belongs to the slider) in hierarchy
-#### 2.4. SceneInfo -> Name
+#### 2.3. SceneInfo -> Name
 For information on which slider belogs to which scene. It is also used it for the Playerprefs key.
-#### 2.5. SceneInfo -> FolderPath
+#### 2.4. SceneInfo -> FolderPath
 The folder path where the scenes are located.
-#### 2.6. Shortcuts (Runtime)
+#### 2.5. Shortcuts (Runtime)
 "P: Pause | N: Jump next level | R: Restart"
-#### 2.7. Shortcuts (Editor)
+#### 2.6. Shortcuts (Editor)
 Alt + A	=> Quickly open/close LevelManager <br>
 Ctrl + Shift + B =>	Build Settings <br>
 Alt+Ctrl+C => Copy folder path <br>
