@@ -9,7 +9,7 @@ namespace AdditiveSceneHelper
     [CustomEditor(typeof(LevelManager))]
     public class LevelManagerEditor : Editor
     {
-        public static List<int> openedSceneFolderPathHasCodeListOnHierarchy;
+        public static List<int> OpenedSceneFolderPathHasCodeList => Enumerable.Range(0, ESM.sceneCount).Select(i => ESM.GetSceneAt(i).path.GetFolderPathFromScenePath().GetHashCode()).ToList();
 
         LevelManager levelManager;
         SceneInfoInEditor[] scenesInfoInEditors;
@@ -17,18 +17,6 @@ namespace AdditiveSceneHelper
         private void OnEnable()
         {
             Init();
-            ESM.sceneClosed += OnSceneClosedMethod;
-        }
-
-        private void OnDisable()
-        {
-            ESM.sceneClosed -= OnSceneClosedMethod;
-        }
-
-        public void OnSceneClosedMethod(UnityEngine.SceneManagement.Scene closedScene)
-        {
-            if (openedSceneFolderPathHasCodeListOnHierarchy.Contains(closedScene.path.GetFolderPathFromScenePath().GetHashCode()))
-                openedSceneFolderPathHasCodeListOnHierarchy.Remove(closedScene.path.GetFolderPathFromScenePath().GetHashCode());
         }
 
         public override void OnInspectorGUI()
@@ -53,11 +41,12 @@ namespace AdditiveSceneHelper
         private void Init()
         {
             levelManager = target as LevelManager;
-            openedSceneFolderPathHasCodeListOnHierarchy = Enumerable.Range(0, ESM.sceneCount).Select(i => ESM.GetSceneAt(i).path.GetFolderPathFromScenePath().GetHashCode()).ToList();
 
             scenesInfoInEditors = new SceneInfoInEditor[levelManager.sceneInfos.Length];
             for (int i = 0; i < scenesInfoInEditors.Length; i++)
                 scenesInfoInEditors[i] = new SceneInfoInEditor(levelManager.sceneInfos[i]);
         }
+
+        public static int GetSceneIndex(int sceneFolderPathHashCode) => OpenedSceneFolderPathHasCodeList.FindIndex(1, x => x == sceneFolderPathHashCode);
     }
 }
