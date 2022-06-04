@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace AdditiveSceneHelper
 {
-    [CreateAssetMenu(fileName = "LevelManager", menuName = "Additive Scene Manager/LevelManager", order = 0)]
+    [CreateAssetMenu(fileName = "LevelManager", menuName = "Additive Scene Helper/LevelManager", order = 0)]
     public class LevelManager : ScriptableObject
     {
         [SerializeField] string MAIN_SCENE_NAME = "_Main Scene";
@@ -21,6 +21,11 @@ namespace AdditiveSceneHelper
         }
 
         public void ReloadScene()
+        {
+            LoadSceneAccordingInfo();
+        }
+
+        public void LoadSceneAccordingInfo()
         {
             SceneManager.LoadScene(MAIN_SCENE_NAME);
             SceneManager.LoadScene(LevelSceneInfo.CurrSceneName, LoadSceneMode.Additive);

@@ -8,7 +8,7 @@ namespace AdditiveSceneHelper
     {
         /*
             Alt + a => Quickly open/close LevelManager
-            DERLENDİKTEN SONRA PENCERE AÇIKSA ONENABLE ÇALIŞYOR AMA ONDİSABLE ÇALIŞMIYOR
+                IF THE WINDOW IS OPEN AFTER COMPILING, ONENABLE WORKS BUT ONDISABLE DOES NOT WORK
         */
 
         static LevelManager levelManager;
