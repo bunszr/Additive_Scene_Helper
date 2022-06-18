@@ -10,6 +10,8 @@ namespace AdditiveSceneHelper
     {
         [SerializeField] string MAIN_SCENE_NAME = "_Main Scene";
 
+        // [NonReorderable] // If there is array overlapping problem, As a temporary fix till its fixed 
+        // Unity bug https://answers.unity.com/questions/1828499/nested-class-lists-inspector-overlapping-bug.html 
         public ScenesInfo[] sceneInfos;
 
         public ScenesInfo LevelSceneInfo => sceneInfos[0];
@@ -52,11 +54,25 @@ namespace AdditiveSceneHelper
         {
             public string name;
             public string sceneFolderPath;
-            [SerializeField] Object[] sceneObjects = new Object[] { };
 
-            public int NumScenes => sceneObjects.Length;
-            public string CurrSceneName => sceneObjects[LevelIndex].name;
-            public string CurrScenePath => sceneFolderPath + "/" + sceneObjects[LevelIndex].name + ".unity";
+            [SerializeField] Object[] sceneObjects = new Object[] { }; // Error during build on iOS "sceneObjects[i].name"
+            [HideInInspector, SerializeField] string[] sceneNames;
+
+            public string[] SceneNames
+            {
+                get
+                {
+#if UNITY_EDITOR
+                    sceneNames = new string[sceneObjects.Length];
+                    for (int i = 0; i < sceneNames.Length; i++) sceneNames[i] = sceneObjects[i].name;
+#endif
+                    return sceneNames;
+                }
+            }
+
+            public int NumScenes => SceneNames.Length;
+            public string CurrSceneName => SceneNames[LevelIndex];
+            public string CurrScenePath => sceneFolderPath + "/" + SceneNames[LevelIndex] + ".unity";
             public int SceneFolderPathHashCode => sceneFolderPath.GetHashCode();
 
             public int LevelIndex
